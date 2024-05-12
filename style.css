@@ -1,0 +1,203 @@
+/* Universal Style */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Navigation Bar Style */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+/* Hero Banner Image Adjustment */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; /* You can adjust this height as needed */
+    overflow: hidden; /* Prevent images from exceeding the container */
+}
+
+.hero img {
+    max-width: 100%;
+    height: 500px;
+    object-fit: cover; /* Maintain image aspect ratio and fill container */
+}
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #111;
+}
+
+nav li.active a {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* form sheet  */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="password"], select, input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Product display area */
+.product-gallery img {
+    width: 30%;
+    margin-right: 5%;
+    float: left;
+    border-radius: 5px;
+}
+
+.image-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Checkout form style */
+.checkout-form {
+    text-align: center;
+}
+
+/* footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    nav li {
+        float: none;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    .product-gallery img {
+        width: 45%;
+        margin: 5% 2.5%;
+    }
+}
+/* The existing CSS code remains unchanged, and the parts that need to be modified and added are directly added here */
+
+/* Adapt the main content area and keep the footer at the bottom */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content-wrap {
+    flex-grow: 1;
+}
+
+/* Ensure that the main content is centered */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Horizontal arrangement of shopping page images */
+.product-gallery .image-row {
+    display: flex;
+    justify-content: center;
+}
+
+.product-gallery img {
+    margin: 0 10px;
+    width: calc(30% - 20px); /* Subtract the sum of the margins on both sides to prevent image overflow */
+}
+
+/* The footer is always at the bottom of the page and does not obscure the content */
+body, html {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    flex-grow: 1; /* Allow the content area to fill the remaining space */
+}
+
+footer {
+    /* No absolute positioning required, use Flexbox for automatic adjustment */
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Key row, used to push the footer to the bottom of the container */
+}

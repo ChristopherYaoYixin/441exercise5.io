@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">home </a></li>
+            <li><a href="register.html">register</a></li>
+            <li><a href="login.html">login</a></li>
+            <li class="active"><a href="shop.html">shop</a></li> <!-- 添加active类表示当前页面 -->
+        </ul>
+    </nav>
+    
+    <!-- Main content of shopping page -->
+    <main>
+        <h1>Welcome to Shopping</h1>
+        
+        <!-- Product display area -->
+        <section class="product-gallery">
+            <div class="image-row">
+                <img src="1.jpg" alt="产品1图片">
+                <img src="2.jpg" alt="产品2图片">
+                <img src="3.jpg" alt="产品3图片">
+            </div>
+        </section>
+        
+        <!-- Checkout form -->
+        <section class="checkout-form">
+            <form id="checkoutForm">
+                <label for="quantity">quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+                
+                <label for="productSelect">Select product:</label>
+                <select id="productSelect" name="productSelect">
+                    <option value="product1">Product1 - $800</option>
+                    <option value="product2">Product2 - $900</option>
+                    <option value="product3">Product3 - $1000</option> <!-- Fix duplicate values -->
+                </select>
+                
+                <button type="button" onclick="processCheckout()">Checkout</button>
+                
+                <div id="totalOrder" style="display:none;">
+                    <h2>Your order details:</h2>
+                    <p id="orderSummary"></p>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+    <!-- footer -->
+    <footer>
+        &copy; 2024 Your Name. Student details:Christopher, 223190731
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
